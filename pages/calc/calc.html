@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar color="dark" style="text-align: center"> 
+    <ion-title><p>Calculadora</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-navbar color="dark">
+    <form>
+			<ion-item  color="dark">
+				<ion-input placeholder="0" name="display" [(ngModel)]="resultnormal"></ion-input>
+			</ion-item>
+		</form>
+
+    <div style="color: #fff">
+      <p>
+      <strong style="color: #696969">BIN:</strong> {{resultbin}} <p>
+      <strong style="color: #696969">OCT:</strong> {{resultoct}} <p>
+      <strong style="color: #696969">DEC:</strong> {{resultdec}} <p> 
+      <strong style="color: #696969">HEX:</strong> {{resulthex}} <p>
+    </div> 
+
+    <div class="row">
+			<button style="color: #fff; background-color: #DB2B39;" class="col" ion-button (click)="btnClicked('10')"> A </button>
+			<button style="color: #fff; background-color: #DB2B39;" class="col" ion-button (click)="btnClicked('11')"> b </button>
+			<button style="color: #fff; background-color: #DB2B39;" class="col" ion-button (click)="btnClicked('12')"> c </button>
+			<button style="color: #fff; background-color: #DB2B39;" class="col" ion-button (click)="btnClicked('13')"> d </button>
+			<button style="color: #fff; background-color: #DB2B39;" class="col" ion-button (click)="btnClicked('14')"> e </button>
+			<button style="color: #fff; background-color: #DB2B39;" class="col" ion-button (click)="btnClicked('15')"> f </button>
+		</div>
+
+		<div class="row">
+			<button style="color: #fff; background-color: #696969;" class="col" ion-button (click)="btnClicked('C')"> C </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('bs')">
+      <ion-icon ios="ios-backspace" md="ios-backspace-outline"></ion-icon>
+      </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('√')"> √ </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('/')"> / </button>
+		</div>
+
+		<div class="row">
+			<button class="col" ion-button color="dark" (click)="btnClicked('7')"> 7 </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('8')"> 8 </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('9')"> 9 </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('*')"> X </button>
+		</div>
+
+		<div class="row">
+			<button class="col" ion-button color="dark" (click)="btnClicked('4')"> 4 </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('5')"> 5 </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('6')"> 6 </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('-')"> - </button>
+		</div>
+
+		<div class="row">
+			<button class="col" ion-button color="dark" (click)="btnClicked('1')"> 1 </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('2')"> 2 </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('3')"> 3 </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('+')"> + </button>
+		</div>
+
+		<div class="row">
+			<button class="col" ion-button color="dark" (click)="btnClicked('%')"> % </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('0')"> 0 </button>
+			<button class="col" ion-button color="dark" (click)="btnClicked('.')"> . </button>
+			<button style="color: #fff; background-color: #696969;" class="col" ion-button (click)="btnClicked('=')"> = </button>
+		</div>
+	</ion-navbar>
+</ion-content>
